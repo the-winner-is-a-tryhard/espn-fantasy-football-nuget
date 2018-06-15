@@ -1,6 +1,6 @@
 ﻿namespace Espn.Fantasy.Football.Domain.Provider
 {
-    public class HardcodedUrlConfigurationProvider :IUrlConfigurationProvider
+    public class HardcodedUrlConfigurationProvider : IUrlConfigurationProvider
     {
         public string GetUrlBase()
         {
