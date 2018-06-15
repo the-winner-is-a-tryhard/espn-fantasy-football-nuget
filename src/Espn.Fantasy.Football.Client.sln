@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Espn.Fantasy.Football.Client", "Espn.Fantasy.Football.Client\Espn.Fantasy.Football.Client.csproj", "{70B3558D-796F-494B-AAC3-D6D66A84D444}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Espn.Fantasy.Football.Domain", "Espn.Fantasy.Football.Domain\Espn.Fantasy.Football.Domain.csproj", "{2CA36AC3-3790-46F7-B423-CAF2E4819218}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70B3558D-796F-494B-AAC3-D6D66A84D444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70B3558D-796F-494B-AAC3-D6D66A84D444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70B3558D-796F-494B-AAC3-D6D66A84D444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70B3558D-796F-494B-AAC3-D6D66A84D444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CA36AC3-3790-46F7-B423-CAF2E4819218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CA36AC3-3790-46F7-B423-CAF2E4819218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CA36AC3-3790-46F7-B423-CAF2E4819218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CA36AC3-3790-46F7-B423-CAF2E4819218}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8BF17BE8-8622-4063-AD10-1CCF011FDCF9}
+	EndGlobalSection
+EndGlobal
