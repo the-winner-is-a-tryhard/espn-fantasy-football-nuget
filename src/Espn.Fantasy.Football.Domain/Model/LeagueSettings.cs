@@ -19,7 +19,7 @@ namespace Espn.Fantasy.Football.Domain.Model
         public List<int> PlayoffSeedings { get; set; }
         public int WaiverProcessHour { get; set; }
         public DateTime DateFutureKeeperLock { get; set; }
-        public Dictionary<string, string> ScoringPeriodsByMatchupPeriod { get; set; }
+        public Dictionary<string, List<int>> ScoringPeriodsByMatchupPeriod { get; set; }
         public List<WaiverDetail> WaiverDetails { get; set; }
         public int PlayoffTieRuleRawStatId { get; set; }
         public int MatchupPeriodTypeId { get; set; }
