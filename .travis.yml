@@ -6,5 +6,5 @@ install:
 - dotnet restore src
 
 script:
- - dotnet build
- -  dotnet test src/Espn.Fantasy.Football.Tests.Integration.NetCore20/Espn.Fantasy.Football.Tests.Integration.NetCore20.csproj
+ - dotnet build src
+ - dotnet test src/Espn.Fantasy.Football.Tests.Integration.NetCore20/Espn.Fantasy.Football.Tests.Integration.NetCore20.csproj
