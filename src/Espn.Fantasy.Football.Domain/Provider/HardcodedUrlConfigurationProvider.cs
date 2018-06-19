@@ -12,5 +12,11 @@
             const string LEAGUE_ENDPOINT_FORMAT = "{0}leagueSettings?leagueId={1}&seasonId={2}";
             return string.Format(LEAGUE_ENDPOINT_FORMAT, GetUrlBase(), leagueId, year);
         }
+
+        public string GetScoreboardEndpointWithBase(int leagueId, int year)
+        {
+            const string SCOREBOARD_ENDPOINT_FORMAT = "{0}scoreboard?leagueId={1}&seasonId={2}";
+            return string.Format(SCOREBOARD_ENDPOINT_FORMAT, GetUrlBase(), leagueId, year);
+        }
     }
 }

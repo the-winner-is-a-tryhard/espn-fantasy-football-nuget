@@ -2,27 +2,27 @@
 {
     public class Record
     {
-        public int AwayPercentage { get; set; }
-        public int DivisionStanding { get; set; }
-        public int OverallStanding { get; set; }
-        public int DivisionLosses { get; set; }
-        public int HomePercentage { get; set; }
-        public int AwayTies { get; set; }
-        public int DivisionWins { get; set; }
-        public int StreakType { get; set; }
-        public int OverallTies { get; set; }
-        public int HomeTies { get; set; }
-        public int HomeWins { get; set; }
-        public int DivisionTies { get; set; }
-        public int OverallPercentage { get; set; }
-        public int OverallWins { get; set; }
-        public int OverallLosses { get; set; }
-        public int StreakLength { get; set; }
-        public int PointsAgainst { get; set; }
-        public int AwayWins { get; set; }
-        public int DivisionPercentage { get; set; }
-        public int HomeLosses { get; set; }
-        public int PointsFor { get; set; }
-        public int AwayLosses { get; set; }
+        public decimal AwayPercentage { get; set; }
+        public decimal DivisionStanding { get; set; }
+        public decimal OverallStanding { get; set; }
+        public decimal DivisionLosses { get; set; }
+        public decimal HomePercentage { get; set; }
+        public decimal AwayTies { get; set; }
+        public decimal DivisionWins { get; set; }
+        public decimal StreakType { get; set; }
+        public decimal OverallTies { get; set; }
+        public decimal HomeTies { get; set; }
+        public decimal HomeWins { get; set; }
+        public decimal DivisionTies { get; set; }
+        public decimal OverallPercentage { get; set; }
+        public decimal OverallWins { get; set; }
+        public decimal OverallLosses { get; set; }
+        public decimal StreakLength { get; set; }
+        public decimal PodecimalsAgainst { get; set; }
+        public decimal AwayWins { get; set; }
+        public decimal DivisionPercentage { get; set; }
+        public decimal HomeLosses { get; set; }
+        public decimal PointsFor { get; set; }
+        public decimal AwayLosses { get; set; }
     }
 }

@@ -6,7 +6,7 @@ namespace Espn.Fantasy.Football.Domain.Model
     {
         public bool Home { get; set; }
         public double Score { get; set; }
-        public Team Team { get; set; }
+        public TeamRecord Team { get; set; }
         public int TeamId { get; set; }
         public List<int> PlayerIDs { get; set; }
     }

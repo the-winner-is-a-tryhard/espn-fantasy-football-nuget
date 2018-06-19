@@ -23,5 +23,20 @@ namespace Espn.Fantasy.Football.Tests.Integration.NetCore20
             //assert
             league.Should().NotBeNull();
         }
+
+        [Test]
+        public async Task Should_GetScoreboardAsync_ForValidInput()
+        {
+            //arrange
+            int leagueId = 526113;
+            int year = 2018;
+            EspnFantasyFootballClient espnFantasyFootballClient = new EspnFantasyFootballClient();
+
+            //act
+            LeagueScoreboard leagueScoreboard = await espnFantasyFootballClient.GetScoreboardAsync(leagueId, year);
+
+            //assert
+            leagueScoreboard.Should().NotBeNull();
+        }
     }
 }
