@@ -4,6 +4,6 @@
     {
         public int DivisionId { get; set; }
         public string Name { get; set; }
-        public int Size { get; set; }
+        public decimal Size { get; set; }
     }
 }

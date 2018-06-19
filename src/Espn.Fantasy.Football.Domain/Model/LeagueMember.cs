@@ -4,7 +4,7 @@
     {
         public bool IsReverseItem { get; set; }
         public int StatId { get; set; }
-        public double Points { get; set; }
+        public decimal Points { get; set; }
         public bool IsTeamScoringItem { get; set; }
     }
 }

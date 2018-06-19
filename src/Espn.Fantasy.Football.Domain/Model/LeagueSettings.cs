@@ -5,13 +5,13 @@ namespace Espn.Fantasy.Football.Domain.Model
 {
     public class LeagueSettings
     {
-        public int PlayoffHomeTeamBonus { get; set; }
+        public decimal PlayoffHomeTeamBonus { get; set; }
         public int DraftStatusTypeId { get; set; }
         public int PlayerAcquisitionType { get; set; }
         public int DraftOrderTypeId { get; set; }
         public List<Division> Divisions { get; set; }
         public int LeagueStatusTypeId { get; set; }
-        public int HomeTeamBonus { get; set; }
+        public decimal HomeTeamBonus { get; set; }
         public List<ScoringItem> ScoringItems { get; set; }
         public int RosterMoveLimit { get; set; }
         public DateTime DateDraftCompleted { get; set; }
@@ -31,7 +31,7 @@ namespace Espn.Fantasy.Football.Domain.Model
         public int WaiverHours { get; set; }
         public int PlayoffMatchupLength { get; set; }
         public int VetoVotesRequired { get; set; }
-        public int Size { get; set; }
+        public decimal Size { get; set; }
         public int ScoringDecimalPlaces { get; set; }
         public Dictionary<string, TeamDetails> Teams { get; set; }
         public int MinimumBidAmount { get; set; }

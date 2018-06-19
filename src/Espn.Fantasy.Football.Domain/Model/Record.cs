@@ -18,7 +18,7 @@
         public decimal OverallWins { get; set; }
         public decimal OverallLosses { get; set; }
         public decimal StreakLength { get; set; }
-        public decimal PodecimalsAgainst { get; set; }
+        public decimal PointsAgainst { get; set; }
         public decimal AwayWins { get; set; }
         public decimal DivisionPercentage { get; set; }
         public decimal HomeLosses { get; set; }
