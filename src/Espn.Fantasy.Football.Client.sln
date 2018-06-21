@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Espn.Fantasy.Football.Clien
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Espn.Fantasy.Football.Domain", "Espn.Fantasy.Football.Domain\Espn.Fantasy.Football.Domain.csproj", "{2CA36AC3-3790-46F7-B423-CAF2E4819218}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Espn.Fantasy.Football.Serialization.NewtonSoft", "Espn.Fantasy.Football.Serialization.NewtonSoft\Espn.Fantasy.Football.Serialization.NewtonSoft.csproj", "{63B62160-6DD9-43B7-91C3-46B60CCEF2BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Espn.Fantasy.Football.Serialization.NewtonSoft", "Espn.Fantasy.Football.Serialization.NewtonSoft\Espn.Fantasy.Football.Serialization.NewtonSoft.csproj", "{63B62160-6DD9-43B7-91C3-46B60CCEF2BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Espn.Fantasy.Football.Tests.Integration.NetCore20", "Espn.Fantasy.Football.Tests.Integration.NetCore20\Espn.Fantasy.Football.Tests.Integration.NetCore20.csproj", "{A27394B5-A38F-426A-8FF7-D9733BFAE554}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Espn.Fantasy.Football.Tests.Integration", "Espn.Fantasy.Football.Tests.Integration\Espn.Fantasy.Football.Tests.Integration.csproj", "{A27394B5-A38F-426A-8FF7-D9733BFAE554}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Espn.Fantasy.Football.Tests.Unit", "Espn.Fantasy.Football.Tests.Unit\Espn.Fantasy.Football.Tests.Unit.csproj", "{65BAD4CE-0B0F-457F-B350-739F02A205B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A27394B5-A38F-426A-8FF7-D9733BFAE554}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A27394B5-A38F-426A-8FF7-D9733BFAE554}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A27394B5-A38F-426A-8FF7-D9733BFAE554}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65BAD4CE-0B0F-457F-B350-739F02A205B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65BAD4CE-0B0F-457F-B350-739F02A205B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65BAD4CE-0B0F-457F-B350-739F02A205B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65BAD4CE-0B0F-457F-B350-739F02A205B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

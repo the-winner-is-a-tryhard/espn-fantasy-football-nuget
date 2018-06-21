@@ -4,7 +4,7 @@ using Espn.Fantasy.Football.Domain.Model;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace Espn.Fantasy.Football.Tests.Integration.NetCore20
+namespace Espn.Fantasy.Football.Tests.Integration.NetCore20.Client
 {
     [TestFixture]
     public class ClientTests
