@@ -2,7 +2,7 @@
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace Espn.Fantasy.Football.Tests.Unit.NetCore20.Provider
+namespace Espn.Fantasy.Football.Tests.Unit.Provider
 {
     [TestFixture]
     public class HardcodedUrlConfigurationProviderTests

@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Espn.Fantasy.Football.Tests
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Espn.Fantasy.Football.Tests.Unit", "Espn.Fantasy.Football.Tests.Unit\Espn.Fantasy.Football.Tests.Unit.csproj", "{65BAD4CE-0B0F-457F-B350-739F02A205B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Espn.Fantasy.Football.Tests.Assets", "Espn.Fantasy.Football.Tests.Assets\Espn.Fantasy.Football.Tests.Assets.csproj", "{4DC8BFB1-5D33-44FA-9913-12DCD7900FB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{65BAD4CE-0B0F-457F-B350-739F02A205B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65BAD4CE-0B0F-457F-B350-739F02A205B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65BAD4CE-0B0F-457F-B350-739F02A205B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DC8BFB1-5D33-44FA-9913-12DCD7900FB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DC8BFB1-5D33-44FA-9913-12DCD7900FB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DC8BFB1-5D33-44FA-9913-12DCD7900FB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DC8BFB1-5D33-44FA-9913-12DCD7900FB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

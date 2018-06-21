@@ -19,6 +19,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Espn.Fantasy.Football.Domain\Espn.Fantasy.Football.Domain.csproj" />
+    <ProjectReference Include="..\Espn.Fantasy.Football.Serialization.NewtonSoft\Espn.Fantasy.Football.Serialization.NewtonSoft.csproj" />
+    <ProjectReference Include="..\Espn.Fantasy.Football.Tests.Assets\Espn.Fantasy.Football.Tests.Assets.csproj" />
   </ItemGroup>
 
 </Project>
