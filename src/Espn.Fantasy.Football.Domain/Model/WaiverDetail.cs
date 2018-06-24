@@ -1,4 +1,6 @@
-﻿namespace Espn.Fantasy.Football.Domain.Model
+﻿using System;
+
+namespace Espn.Fantasy.Football.Domain.Model
 {
     public class WaiverDetail
     {
