@@ -2,9 +2,12 @@
 {
     public class LeagueMember
     {
-        public bool IsReverseItem { get; set; }
-        public int StatId { get; set; }
-        public decimal Points { get; set; }
-        public bool IsTeamScoringItem { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public bool IsLeagueManager { get; set; }
+        public int InviteId { get; set; }
+        public bool IsLeagueCreator { get; set; }
+        public int UserProfileId { get; set; }
+        public string UserName { get; set; }
     }
 }

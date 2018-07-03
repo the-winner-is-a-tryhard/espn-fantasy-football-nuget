@@ -23,7 +23,7 @@ namespace Espn.Fantasy.Football.Tests.Assets.League
                     new Division()
                     {
                         DivisionId = 0,
-                        Name = "Division 1",
+                        DivisionName = "Division 1",
                         Size = 12
                     }
                 },
@@ -66,12 +66,21 @@ namespace Espn.Fantasy.Football.Tests.Assets.League
                 FutureKeeperCount = 2,
                 HomeTeamBonus = 0m,
                 Id = 526113,
-                InviteKey = null,
+                InviteKey = "4ec12",
                 IsViewable = true,
                 LeagueFormatTypeId = 0,
                 LeagueMembers = new List<LeagueMember>
                 {
-
+                    new LeagueMember()
+                    {
+                        IsLeagueCreator = true,
+                        LastName = "Meziere",
+                        InviteId = 0,
+                        IsLeagueManager = false,
+                        UserProfileId = 26483835,
+                        UserName = "Buttscreams",
+                        FirstName = "Carl"
+                    }
                 },
                 LeagueStatusTypeId = 1,
                 LeagueSubTypeId = 0,
@@ -79,7 +88,11 @@ namespace Espn.Fantasy.Football.Tests.Assets.League
                 LineupLocktimeType = 0,
                 MatchupAcquisitionLimits = new List<MatchupAcquisitionLimit>
                 {
-
+                    new MatchupAcquisitionLimit()
+                    {
+                        Limit = -1,
+                        MatchupPeriodId = 1
+                    }
                 },
                 MatchupPeriodTypeId = 1,
                 MinimumBidAmount = 1,
@@ -110,7 +123,11 @@ namespace Espn.Fantasy.Football.Tests.Assets.League
                 PlayoffTieRuleRawStatId = 0,
                 PositionItems = new List<PositionItem>
                 {
-
+                    new PositionItem()
+                    {
+                        Max = 0,
+                        PositionId = 0
+                    }
                 },
                 PremiumTypeId = 0,
                 RegularSeasonMatchupLength = 1,
@@ -476,11 +493,175 @@ namespace Espn.Fantasy.Football.Tests.Assets.League
                 Size = 12m,
                 SlotCategoryItems = new List<SlotCategoryItem>
                 {
-
+                    new SlotCategoryItem()
+                    {
+                        Num = 1,
+                        SlotCategoryId = 0
+                    }
                 },
                 Teams = new Dictionary<string, TeamDetails>
                 {
-
+                    {"1", new TeamDetails()
+                    {
+                        DivisionStanding = 2,
+                        Percentile = 0,
+                        OverallStanding = 2,
+                        TeamAbbrev = "TRSH",
+                        WaiverRank = 12,
+                        TeamNickname = "of the Law",
+                        DraftPicks = new List<DraftPick>()
+                        {
+                            new DraftPick()
+                            {
+                                DraftPickId = 101,
+                                OwningTeams = new List<int>()
+                                {
+                                    1
+                                },
+                                RoundSelection = 11,
+                                IsTradeLocked = false,
+                                IsKeeper = false,
+                                Round = 1,
+                                OverallSelection = 11,
+                                PlayerPotentialTransactions = new PlayerPotentialTransactions()
+                                {
+                                    Trade = "7_101_1_-1_13_-1"
+                                }
+                            }
+                        },
+                        LogoUrl = "https://i.imgur.com/P0tCXCd.gif",
+                        LogoType = "custom",
+                        TeamId = 1,
+                        TeamTransactions = new TeamTransactions()
+                        {
+                            MoveToIr = 0,
+                            MatchupAcquisitionTotals = new List<MatchupAcquisitionTotal>()
+                            {
+                                new MatchupAcquisitionTotal()
+                                {
+                                    Total = 0,
+                                    MatchupPeriodId = 1
+                                }
+                            },
+                            MiscTeamCharges = 0,
+                            AcquisitionBudgetSpent = 0,
+                            AmountPaid = 0,
+                            Drops = 0,
+                            MoveToActive = 0,
+                            Trades = 0,
+                            OverallAcquisitionTotal = 0,
+                            OffseasonAcquisitionTotal = 0
+                        },
+                        ScheduleItems = new List<ScheduleItem>()
+                        {
+                            new ScheduleItem()
+                            {
+                                Matchups = new List<Matchup>()
+                                {
+                                    new Matchup()
+                                    {
+                                        MatchupTypeId = 0,
+                                        AwayTeamScores = new List<int>()
+                                        {
+                                            0
+                                        },
+                                        AwayTeam = new Team()
+                                        {
+                                            WaiverRank = 11,
+                                            Division = new Division()
+                                            {
+                                                DivisionId = 0,
+                                                DivisionName = "Division 1",
+                                                Size = 12
+                                            },
+                                            TeamAbbrev = "BOOB",
+                                            TeamNickname = "2",
+                                            LogoUrl = "http://cdn.sportige.com/wp-content/uploads/2016/09/You-like-Dak-e1474290992590.jpg",
+                                            TeamLocation = "Dezpacito",
+                                            TeamId = 3,
+                                            LogoType = "customValid"
+                                        },
+                                        AwayTeamAdjustment = 0,
+                                        AwayTeamId = 3,
+                                        IsBye = false,
+                                        HomeTeamId = 1,
+                                        HomeTeamAdjustment = 0,
+                                        HomeTeamScores = new List<int>()
+                                        {
+                                            0
+                                        },
+                                        HomeTeamBonus = 0,
+                                        Outcome = 0,
+                                        HomeTeam = new Team()
+                                        {
+                                            WaiverRank = 12,
+                                            Division = new Division()
+                                            {
+                                                DivisionId = 0,
+                                                DivisionName = "Division 1",
+                                                Size = 12
+                                            },
+                                            TeamAbbrev = "TRSH",
+                                            TeamNickname = "of the Law",
+                                            LogoUrl = "https://i.imgur.com/P0tCXCd.gif",
+                                            TeamLocation = "The Schlong Arm",
+                                            TeamId = 1,
+                                            LogoType = "custom"
+                                        }
+                                    }
+                                },
+                                MatchupPeriodId = 1
+                            }
+                        },
+                        Record = new Record()
+                        {
+                            AwayPercentage = 0,
+                            DivisionStanding = 2,
+                            OverallStanding = 2,
+                            DivisionLosses = 0,
+                            HomePercentage = 0,
+                            AwayTies = 0,
+                            DivisionWins = 0,
+                            StreakType = 0,
+                            OverallTies = 0,
+                            HomeTies = 0,
+                            HomeWins = 0,
+                            DivisionTies = 0,
+                            OverallPercentage = 0,
+                            OverallWins = 0,
+                            OverallLosses = 0,
+                            StreakLength = 0,
+                            PointsAgainst = 0,
+                            AwayWins = 0,
+                            DivisionPercentage = 0,
+                            HomeLosses = 0,
+                            PointsFor = 0,
+                            AwayLosses = 0
+                        },
+                        Rank = 0,
+                        Division = new Division()
+                        {
+                            DivisionId = 0,
+                            DivisionName = "Division 1",
+                            Size = 12
+                        },
+                        TeamLocation = "The Schlong Arm",
+                        Owners = new List<Owner>()
+                        {
+                            new Owner()
+                            {
+                                LastName = "Meziere",
+                                PrimaryOwner = true,
+                                LeagueManager = true,
+                                Joined = true,
+                                InviteId = 0,
+                                OwnerId = 26483835,
+                                UserProfileId = 26483835,
+                                PhotoUrl = "http://f.espncdn.com/avatars/Buttscreams/medium",
+                                FirstName = "Carl"
+                            }
+                        }
+                    }}
                 },
                 TieRule = 0,
                 TieRuleRawStatId = -1,
@@ -493,7 +674,11 @@ namespace Espn.Fantasy.Football.Tests.Assets.League
                 VetoVotesRequired = 4,
                 WaiverDetails = new List<WaiverDetail>
                 {
-
+                    new WaiverDetail()
+                    {
+                        ProcessedCount = 2,
+                        DateProcessed = 20140810
+                    }
                 },
                 WaiverHours = 24,
                 WaiverOrderSystemTypeId = 0,
@@ -502,12 +687,12 @@ namespace Espn.Fantasy.Football.Tests.Assets.League
             },
             Metadata = new LeagueMetadata()
             {
-                DateModifiedLeague = new DateTime(2018, 6, 20, 8, 30, 32),
-                DateModifiedUser = new DateTime(1, 1, 1, 0, 0, 0),
+                DateModifiedLeague = new DateTime(2018, 6, 20, 8, 30, 32, 963),
+                DateModifiedUser = new DateTime(2018, 5, 24, 1, 54, 2, 457),
                 Defaults = new Defaults(),
                 LeagueId = 526113,
                 SeasonId = 2018,
-                ServerDate = new DateTime(2018, 6, 21, 2, 16, 3),
+                ServerDate = new DateTime(2018, 6, 21, 1, 47, 3, 515),
                 Status = "undrafted"
             }
         };
