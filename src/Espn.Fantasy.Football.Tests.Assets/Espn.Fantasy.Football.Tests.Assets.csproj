@@ -1,15 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
-    <Folder Include="League\" />
+    <Folder Include="LeagueSerialization\" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Espn.Fantasy.Football.Domain\Espn.Fantasy.Football.Domain.csproj" />
   </ItemGroup>
-
 </Project>

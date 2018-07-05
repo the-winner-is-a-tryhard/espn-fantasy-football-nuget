@@ -1,4 +1,4 @@
-﻿namespace Espn.Fantasy.Football.Tests.Assets.League
+﻿namespace Espn.Fantasy.Football.Tests.Assets.LeagueSerialization
 {
     public static class JsonLeagueResponseConstants
     {

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using Espn.Fantasy.Football.Domain.Model;
 
-namespace Espn.Fantasy.Football.Tests.Assets.League
+namespace Espn.Fantasy.Football.Tests.Assets.LeagueSerialization
 {
     public static class CSharpLeagueTestCaseConstants
     {
-        public static readonly Domain.Model.League LEAGUE_OUTPUT_OBJECT = new Domain.Model.League()
+        public static readonly League LEAGUE_OUTPUT_OBJECT = new League()
         {
             LeagueSettings = new LeagueSettings()
             {
