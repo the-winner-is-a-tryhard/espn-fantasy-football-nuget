@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Espn.Fantasy.Football.Domain.Model;
+using Espn.Fantasy.Football.Domain.Model.Response;
 using Espn.Fantasy.Football.Domain.Provider;
 
 namespace Espn.Fantasy.Football.Domain.Service

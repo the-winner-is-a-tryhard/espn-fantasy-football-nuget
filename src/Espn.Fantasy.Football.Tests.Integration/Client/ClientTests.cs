@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Espn.Fantasy.Football.Client;
-using Espn.Fantasy.Football.Domain.Model;
+using Espn.Fantasy.Football.Domain.Model.Response;
 using FluentAssertions;
 using NUnit.Framework;
 

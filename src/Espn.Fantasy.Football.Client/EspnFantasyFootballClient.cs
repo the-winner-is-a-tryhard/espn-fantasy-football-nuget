@@ -1,6 +1,5 @@
-﻿using System;
-using System.Threading.Tasks;
-using Espn.Fantasy.Football.Domain.Model;
+﻿using System.Threading.Tasks;
+using Espn.Fantasy.Football.Domain.Model.Response;
 using Espn.Fantasy.Football.Domain.Provider;
 using Espn.Fantasy.Football.Domain.Service;
 using Espn.Fantasy.Football.Serialization.NewtonSoft;

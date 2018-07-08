@@ -1,4 +1,6 @@
-﻿using Espn.Fantasy.Football.Domain.Model;
+﻿using System;
+using Espn.Fantasy.Football.Domain.Model.Exception;
+using Espn.Fantasy.Football.Domain.Model.Response;
 using Espn.Fantasy.Football.Domain.Provider;
 using Espn.Fantasy.Football.Serialization.NewtonSoft;
 using Espn.Fantasy.Football.Tests.Assets.LeagueSerialization;
@@ -37,6 +39,34 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
             
             //assert
             deserializedScoreboard.Should().BeEquivalentTo(CSharpScoreboardTestCaseConstants.SCOREBOARD_OUTPUT_OBJECT);
+        }
+
+        [Test]
+        public void Should_ThrowEspnServerErrorException_ForNoPermissionsToViewLeagueJson()
+        {
+            //arrange
+            string json = "{\"error\":[{\"message\":\"No permission to view this league\",\"code\":\"functional\"}]}";
+            IJsonSerializationProvider jsonSerializationProvider = new JsonSerializationProvider();
+
+            //act
+            Action action = () => jsonSerializationProvider.DeserializeJson<League>(json);
+
+            //assert
+            action.Should().Throw<EspnServerErrorException>();
+        }
+        
+        [Test]
+        public void Should_ThrowEspnServerErrorException_ForUnableToRetrieveLeagueJson()
+        {
+            //arrange
+            string json = "{\"error\":[{\"message\":\"Unable to retrieve league (2011:526113)\",\"code\":\"functional\"}]}";
+            IJsonSerializationProvider jsonSerializationProvider = new JsonSerializationProvider();
+
+            //act
+            Action action = () => jsonSerializationProvider.DeserializeJson<League>(json);
+
+            //assert
+            action.Should().Throw<EspnServerErrorException>();
         }
     }
 }

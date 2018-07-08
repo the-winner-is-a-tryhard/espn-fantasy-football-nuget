@@ -1,4 +1,5 @@
-﻿using Espn.Fantasy.Football.Domain.Provider;
+﻿using Espn.Fantasy.Football.Domain.Model.Exception;
+using Espn.Fantasy.Football.Domain.Provider;
 using Newtonsoft.Json;
 
 namespace Espn.Fantasy.Football.Serialization.NewtonSoft
@@ -7,7 +8,15 @@ namespace Espn.Fantasy.Football.Serialization.NewtonSoft
     {
         public T DeserializeJson<T>(string json)
         {
-            return JsonConvert.DeserializeObject<T>(json);
+            EspnServerErrorResponse espnServerErrorResponse = JsonConvert.DeserializeObject<EspnServerErrorResponse>(json);
+            if (espnServerErrorResponse?.Error == null)
+            {
+                return JsonConvert.DeserializeObject<T>(json);
+            }
+            throw new EspnServerErrorException()
+            {
+                EspnServerErrorMessage = espnServerErrorResponse.Error
+            };
         }
     }
 }

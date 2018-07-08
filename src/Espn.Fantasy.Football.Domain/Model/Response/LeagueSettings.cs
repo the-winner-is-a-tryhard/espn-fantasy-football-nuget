@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Espn.Fantasy.Football.Domain.Model
+namespace Espn.Fantasy.Football.Domain.Model.Response
 {
     public class LeagueSettings
     {
