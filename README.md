@@ -8,7 +8,16 @@ The source code was written using C# 7.0. The domain logic targets .NET Standard
 At the moment, I'm working with a very limited set of fantasy league settings. For reference, my league is 12-person standard, non-PPR. If you run into issues, please be sure to include the JSON repsonse or your league ID and year in the issue description. Feel free to send me your league information so that I can create more deserialization unit tests.
 
 # Usage
-TBD
+Start by initializing the client:
+<code>EspnFantasyFootballClient espnFantasyFootballClient = new EspnFantasyFootballClient();</code>
+
+The client has two methods. The first one fetches league metadata:
+<code>League league = await espnFantasyFootballClient.GetLeagueAsync(leagueId, year);</code>
+
+The second fetches the current scoreboard:
+<code>LeagueScoreboard leagueScoreboard = await espnFantasyFootballClient.GetScoreboardAsync(leagueId, year);</code>
+
+Note that your <code>leagueId</code> can be obtained from the URL when navigating to ESPN's fantasy webpage. <code>year</code> is simply the year in integer format (i.e. 2018).
 
 # Beta Release
 Please keep in mind that this package is a work in progress. Please feel free to submit issues, improvements, pull requests, etc.
