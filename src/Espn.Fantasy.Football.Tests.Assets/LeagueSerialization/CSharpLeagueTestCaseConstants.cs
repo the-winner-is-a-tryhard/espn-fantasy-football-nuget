@@ -561,7 +561,7 @@ namespace Espn.Fantasy.Football.Tests.Assets.LeagueSerialization
                                     new Matchup()
                                     {
                                         MatchupTypeId = 0,
-                                        AwayTeamScores = new List<int>()
+                                        AwayTeamScores = new List<double>()
                                         {
                                             0
                                         },
@@ -586,7 +586,7 @@ namespace Espn.Fantasy.Football.Tests.Assets.LeagueSerialization
                                         IsBye = false,
                                         HomeTeamId = 1,
                                         HomeTeamAdjustment = 0,
-                                        HomeTeamScores = new List<int>()
+                                        HomeTeamScores = new List<double>()
                                         {
                                             0
                                         },
