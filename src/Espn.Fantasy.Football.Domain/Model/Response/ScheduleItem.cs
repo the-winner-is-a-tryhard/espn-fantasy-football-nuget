@@ -4,7 +4,7 @@ namespace Espn.Fantasy.Football.Domain.Model.Response
 {
     public class ScheduleItem
     {
-        public List<Matchup> Matchups { get; set; }
+        public IList<Matchup> Matchups { get; set; }
         public int MatchupPeriodId { get; set; }
     }
 }

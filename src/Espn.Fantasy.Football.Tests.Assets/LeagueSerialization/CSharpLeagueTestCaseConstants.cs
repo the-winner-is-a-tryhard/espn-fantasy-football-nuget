@@ -468,7 +468,7 @@ namespace Espn.Fantasy.Football.Tests.Assets.LeagueSerialization
                         StatId = 209
                     }
                 },
-                ScoringPeriodsByMatchupPeriod = new Dictionary<string, List<int>>
+                ScoringPeriodsByMatchupPeriod = new Dictionary<string, IList<int>>
                 {
                     {"1", new List<int> {1}},
                     {"2", new List<int> {2}},

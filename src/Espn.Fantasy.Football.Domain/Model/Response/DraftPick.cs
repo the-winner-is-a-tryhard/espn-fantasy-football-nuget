@@ -5,7 +5,7 @@ namespace Espn.Fantasy.Football.Domain.Model.Response
     public class DraftPick
     {
         public int DraftPickId { get; set; }
-        public List<int> OwningTeams { get; set; }
+        public IList<int> OwningTeams { get; set; }
         public int RoundSelection { get; set; }
         public bool IsTradeLocked { get; set; }
         public bool IsKeeper { get; set; }

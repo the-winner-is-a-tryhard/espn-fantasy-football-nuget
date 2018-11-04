@@ -9,18 +9,18 @@ namespace Espn.Fantasy.Football.Domain.Model.Response
         public int DraftStatusTypeId { get; set; }
         public int PlayerAcquisitionType { get; set; }
         public int DraftOrderTypeId { get; set; }
-        public List<Division> Divisions { get; set; }
+        public IList<Division> Divisions { get; set; }
         public int LeagueStatusTypeId { get; set; }
         public decimal HomeTeamBonus { get; set; }
-        public List<ScoringItem> ScoringItems { get; set; }
+        public IList<ScoringItem> ScoringItems { get; set; }
         public int RosterMoveLimit { get; set; }
         public DateTime DateDraftCompleted { get; set; }
         public int FinalRegularSeasonMatchupPeriodId { get; set; }
-        public List<int> PlayoffSeedings { get; set; }
+        public IList<int> PlayoffSeedings { get; set; }
         public int WaiverProcessHour { get; set; }
         public DateTime DateFutureKeeperLock { get; set; }
-        public Dictionary<string, List<int>> ScoringPeriodsByMatchupPeriod { get; set; }
-        public List<WaiverDetail> WaiverDetails { get; set; }
+        public Dictionary<string, IList<int>> ScoringPeriodsByMatchupPeriod { get; set; }
+        public IList<WaiverDetail> WaiverDetails { get; set; }
         public int PlayoffTieRuleRawStatId { get; set; }
         public int MatchupPeriodTypeId { get; set; }
         public int RestrictionTypeId { get; set; }
@@ -57,17 +57,17 @@ namespace Espn.Fantasy.Football.Domain.Model.Response
         public string Name { get; set; }
         public int DraftTypeId { get; set; }
         public int DraftAuctionBudget { get; set; }
-        public List<PositionItem> PositionItems { get; set; }
+        public IList<PositionItem> PositionItems { get; set; }
         public int TieRuleRawStatId { get; set; }
         public int PremiumTypeId { get; set; }
         public int LeagueSubTypeId { get; set; }
         public int LeagueFormatTypeId { get; set; }
         public int TradeRevisionHours { get; set; }
         public int PlayoffSeedingTieRuleRawStatId { get; set; }
-        public List<int> DraftOrder { get; set; }
+        public IList<int> DraftOrder { get; set; }
         public bool IsViewable { get; set; }
         public bool UsesPlayerAcquisitionBudget { get; set; }
-        public List<LeagueMember> LeagueMembers { get; set; }
+        public IList<LeagueMember> LeagueMembers { get; set; }
         public int FirstScoringPeriodId { get; set; }
         public int RegularSeasonMatchupLength { get; set; }
         public int PlayoffTieRule { get; set; }
@@ -77,9 +77,9 @@ namespace Espn.Fantasy.Football.Domain.Model.Response
         public int FinalScoringPeriodId { get; set; }
         public int SeasonAcquisitionLimit { get; set; }
         public int RosterLocktimeType { get; set; }
-        public List<SlotCategoryItem> SlotCategoryItems { get; set; }
+        public IList<SlotCategoryItem> SlotCategoryItems { get; set; }
         public Finance Finance { get; set; }
-        public List<MatchupAcquisitionLimit> MatchupAcquisitionLimits { get; set; }
+        public IList<MatchupAcquisitionLimit> MatchupAcquisitionLimits { get; set; }
         public int CurrentKeeperCount { get; set; }
     }
 }
