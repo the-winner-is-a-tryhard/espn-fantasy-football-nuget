@@ -66,5 +66,35 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
             //assert
             url.Should().BeEquivalentTo("http://games.espn.com/ffl/api/v2/scoreboard?leagueId=-5555&seasonId=-2018");
         }
+        
+        [Test]
+        public void Should_GetRecentActivityUrl_ForValidInput()
+        {
+            //arrange
+            int leagueId = 5555;
+            int year = 2018;
+            IUrlConfigurationProvider urlConfigurationProvider = new HardcodedUrlConfigurationProvider();
+
+            //act
+            string url = urlConfigurationProvider.GetRecentActivityEndpointWithBase(leagueId, year);
+
+            //assert
+            url.Should().BeEquivalentTo("http://games.espn.com/ffl/api/v2/recentActivity?leagueId=5555&seasonId=2018");
+        }
+
+        [Test]
+        public void Should_GetRecentActivityUrl_ForNegativeInput()
+        {
+            //arrange
+            int leagueId = -5555;
+            int year = -2018;
+            IUrlConfigurationProvider urlConfigurationProvider = new HardcodedUrlConfigurationProvider();
+
+            //act
+            string url = urlConfigurationProvider.GetRecentActivityEndpointWithBase(leagueId, year);
+
+            //assert
+            url.Should().BeEquivalentTo("http://games.espn.com/ffl/api/v2/recentActivity?leagueId=-5555&seasonId=-2018");
+        }
     }
 }

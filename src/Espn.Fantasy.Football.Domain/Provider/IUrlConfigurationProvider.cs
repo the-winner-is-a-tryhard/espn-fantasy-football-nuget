@@ -5,5 +5,6 @@
         string GetUrlBase();
         string GetLeagueEndpointUrlWithBase(int leagueId, int year);
         string GetScoreboardEndpointWithBase(int leagueId, int year);
+        string GetRecentActivityEndpointWithBase(int leagueId, int year);
     }
 }

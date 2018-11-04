@@ -18,5 +18,11 @@
             const string scoreboardEndpointFormat = "{0}scoreboard?leagueId={1}&seasonId={2}";
             return string.Format(scoreboardEndpointFormat, GetUrlBase(), leagueId, year);
         }
+
+        public string GetRecentActivityEndpointWithBase(int leagueId, int year)
+        {
+            const string recentActivityEndpointFormat = "{0}recentActivity?leagueId={1}&seasonId={2}";
+            return string.Format(recentActivityEndpointFormat, GetUrlBase(), leagueId, year);
+        }
     }
 }

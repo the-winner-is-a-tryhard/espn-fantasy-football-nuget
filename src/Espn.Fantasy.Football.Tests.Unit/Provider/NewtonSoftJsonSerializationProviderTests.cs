@@ -4,6 +4,7 @@ using Espn.Fantasy.Football.Domain.Model.Response;
 using Espn.Fantasy.Football.Domain.Provider;
 using Espn.Fantasy.Football.Serialization.NewtonSoft;
 using Espn.Fantasy.Football.Tests.Assets.LeagueSerialization;
+using Espn.Fantasy.Football.Tests.Assets.RecentActivitySerialization;
 using Espn.Fantasy.Football.Tests.Assets.ScoreboardSerialization;
 using FluentAssertions;
 using NUnit.Framework;
@@ -39,6 +40,20 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
             
             //assert
             deserializedScoreboard.Should().BeEquivalentTo(CSharpScoreboardTestCaseConstants.SCOREBOARD_OUTPUT_OBJECT);
+        }
+        
+        [Test]
+        public void Should_DeserializeRecentActivityJson_ForValidInput()
+        {
+            //arrange
+            string json = JsonRecentActivityResponseConstants.VALID_RECENT_ACTIVITY_JSON;
+            IJsonSerializationProvider jsonSerializationProvider = new JsonSerializationProvider();
+            
+            //act
+            RecentActivity deserializedRecentActivity = jsonSerializationProvider.DeserializeJson<RecentActivity>(json);
+            
+            //assert
+            deserializedRecentActivity.Should().BeEquivalentTo(CSharpRecentActivityTestCaseConstants.RECENT_ACTIVITY_OUTPUT_OBJECT);
         }
 
         [Test]

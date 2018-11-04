@@ -1,0 +1,7 @@
+namespace Espn.Fantasy.Football.Tests.Assets.RecentActivitySerialization
+{
+    public static class JsonRecentActivityResponseConstants
+    {
+        public const string VALID_RECENT_ACTIVITY_JSON = "{\"types\":{\"date\":\"date\",\"dateToProcess\":\"date\",\"dateProposed\":\"date\",\"dateAccepted\":\"date\",\"dateModified\":\"date\",\"pendingMoveItems\":{\"playerId\":\"playerId\"}},\"items\":[{\"date\":\"2018-11-04T15:23:57.755Z\",\"transactionLogItemTypeId\":2,\"parentPendingMoveBatchId\":0,\"rating\":0,\"dateAccepted\":null,\"proposingTeamId\":1,\"actingAsTeamOwner\":false,\"dateToProcess\":null,\"usersProtestTrade\":null,\"tradeProposalExpirationDays\":0,\"proposingUserProfileId\":26483835,\"scoringPeriodToProcess\":0,\"pendingMoveBatchId\":0,\"bidAmount\":0,\"skipTransactionCounters\":false,\"dateModified\":null,\"teamsVotedApproveTrade\":null,\"pendingMoveItems\":[{\"fromSlotCategoryId\":1001,\"moveTypeId\":2,\"toTeamId\":1,\"keeper\":false,\"fromTeamId\":-1,\"rating\":0,\"toSlotCategoryId\":20,\"draftOverallSelection\":0,\"playerId\":18733},{\"fromSlotCategoryId\":23,\"moveTypeId\":3,\"toTeamId\":-1,\"keeper\":false,\"fromTeamId\":1,\"rating\":0,\"toSlotCategoryId\":1001,\"draftOverallSelection\":0,\"playerId\":18313}],\"batchProcessed\":true,\"teamsInvolved\":[1],\"dateProposed\":null,\"statusId\":1,\"byLM\":false,\"teamsVotedVetoTrade\":null,\"typeId\":5,\"userProfileId\":26483835,\"teamsAcceptedTrade\":null,\"activityType\":\"2\"}]}";
+    }
+}

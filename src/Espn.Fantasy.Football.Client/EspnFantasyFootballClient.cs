@@ -25,5 +25,10 @@ namespace Espn.Fantasy.Football.Client
         {
             return await _fantasyFootballService.GetScoreboardAsync(leagueId, year);
         }
+
+        public async Task<RecentActivity> GetRecentActivity(int leagueId, int year)
+        {
+            return await _fantasyFootballService.GetRecentActivity(leagueId, year);
+        }
     }
 }

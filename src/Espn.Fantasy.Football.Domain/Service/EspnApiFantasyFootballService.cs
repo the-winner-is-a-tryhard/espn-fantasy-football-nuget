@@ -26,5 +26,11 @@ namespace Espn.Fantasy.Football.Domain.Service
             string url = _urlConfigurationProvider.GetScoreboardEndpointWithBase(leagueId, year);
             return await _httpProvider.GetAsync<LeagueScoreboard>(url);
         }
+
+        public async Task<RecentActivity> GetRecentActivity(int leagueId, int year)
+        {
+            string url = _urlConfigurationProvider.GetRecentActivityEndpointWithBase(leagueId, year);
+            return await _httpProvider.GetAsync<RecentActivity>(url);
+        }
     }
 }

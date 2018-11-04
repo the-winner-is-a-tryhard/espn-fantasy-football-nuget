@@ -38,5 +38,20 @@ namespace Espn.Fantasy.Football.Tests.Integration.Client
             //assert
             leagueScoreboard.Should().NotBeNull();
         }
+        
+        [Test]
+        public async Task Should_GetRecentActivityAsync_ForValidInput()
+        {
+            //arrange
+            int leagueId = 526113;
+            int year = 2018;
+            EspnFantasyFootballClient espnFantasyFootballClient = new EspnFantasyFootballClient();
+
+            //act
+            RecentActivity recentActivity = await espnFantasyFootballClient.GetRecentActivity(leagueId, year);
+
+            //assert
+            recentActivity.Should().NotBeNull();
+        }
     }
 }
