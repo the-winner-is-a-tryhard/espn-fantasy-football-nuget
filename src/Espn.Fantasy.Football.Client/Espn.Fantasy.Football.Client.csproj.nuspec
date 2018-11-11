@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>Espn.Fantasy.Football</id>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <authors>Scottie Enriquez</authors>
     <owners>Scottie Enriquez</owners>
     <licenseUrl>https://github.com/scottenriquez/espn-fantasy-football-nuget/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/scottenriquez/espn-fantasy-football-nuget</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>.NET Standard NuGet package for interacting with ESPN's fantasy football API</description>
-    <releaseNotes>Fixed type serialization bugs; added recent activity endpoint</releaseNotes>
+    <releaseNotes>Resolves NuGet issues</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>ESPN Fantasy Football FF</tags>
     <dependencies>
@@ -19,6 +19,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\Release\*.dll" target="lib\netstandard2.0" />
+    <file src="bin/Release/netstandard2.0/Espn.Fantasy.Football.Client.dll" target="lib/netstandard2.0/Espn.Fantasy.Football.Client.dll" />
+    <file src="bin/Release/netstandard2.0/Espn.Fantasy.Football.Domain.dll" target="lib/netstandard2.0/Espn.Fantasy.Football.Domain.dll" />
+    <file src="bin/Release/netstandard2.0/Espn.Fantasy.Football.Serialization.NewtonSoft.dll" target="lib/netstandard2.0/Espn.Fantasy.Football.Serialization.NewtonSoft.dll" />
   </files>
 </package>
