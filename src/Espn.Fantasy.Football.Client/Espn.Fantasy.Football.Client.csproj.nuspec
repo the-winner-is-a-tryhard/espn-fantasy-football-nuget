@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>Espn.Fantasy.Football</id>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <authors>Scottie Enriquez</authors>
     <owners>Scottie Enriquez</owners>
     <licenseUrl>https://github.com/scottenriquez/espn-fantasy-football-nuget/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/scottenriquez/espn-fantasy-football-nuget</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>.NET Standard NuGet package for interacting with ESPN's fantasy football API</description>
-    <releaseNotes>Initial beta release</releaseNotes>
+    <releaseNotes>Fixed type serialization bugs; added recent activity endpoint</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>ESPN Fantasy Football FF</tags>
     <dependencies>
