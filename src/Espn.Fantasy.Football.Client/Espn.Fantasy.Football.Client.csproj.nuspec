@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Espn.Fantasy.Football</id>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <authors>Scottie Enriquez</authors>
     <owners>Scottie Enriquez</owners>
     <licenseUrl>https://github.com/scottenriquez/espn-fantasy-football-nuget/blob/master/LICENSE</licenseUrl>
