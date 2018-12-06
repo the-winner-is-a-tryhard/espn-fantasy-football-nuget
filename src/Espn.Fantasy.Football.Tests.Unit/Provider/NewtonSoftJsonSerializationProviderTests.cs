@@ -2,7 +2,7 @@
 using Espn.Fantasy.Football.Domain.Model.Exception;
 using Espn.Fantasy.Football.Domain.Model.Response;
 using Espn.Fantasy.Football.Domain.Provider;
-using Espn.Fantasy.Football.Serialization.NewtonSoft;
+using Espn.Fantasy.Football.Serialization.NewtonSoft.Provider;
 using Espn.Fantasy.Football.Tests.Assets.LeagueSerialization;
 using Espn.Fantasy.Football.Tests.Assets.RecentActivitySerialization;
 using Espn.Fantasy.Football.Tests.Assets.ScoreboardSerialization;

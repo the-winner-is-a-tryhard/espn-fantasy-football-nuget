@@ -2,7 +2,7 @@
 using Espn.Fantasy.Football.Domain.Provider;
 using Newtonsoft.Json;
 
-namespace Espn.Fantasy.Football.Serialization.NewtonSoft
+namespace Espn.Fantasy.Football.Serialization.NewtonSoft.Provider
 {
     public class JsonSerializationProvider : IJsonSerializationProvider
     {
