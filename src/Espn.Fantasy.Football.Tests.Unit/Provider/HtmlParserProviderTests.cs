@@ -10,60 +10,60 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
     public class HtmlParserTests
     {
         [Test]
-        public void Should_GetInnerTextForXpath_ForStandardInput()
+        public void Should_GetInnerTextForXPath_ForStandardInput()
         {
             //arrange
-            string url = "http://www.espn.com/nfl/player/_/id/13295/";
-            string xpath = "//div/h1";
+            string url = "http://www.espn.com/nfl/player/_/id/13295";
+            string xPath = "//div/h1";
             HtmlParser htmlParser = new HtmlParser();
 
             //act
-            string playerName = htmlParser.getInnerTextForFirstXpathMatch(url, xpath);
+            string playerName = htmlParser.getInnerTextForFirstXPathMatch(url, xPath);
 
             //assert
             playerName.Should().Be("Emmanuel Sanders");
         }
         
         [Test]
-        public void ShouldNot_GetInnerTextForXpath_ForInvalidUrl()
+        public void ShouldNot_GetInnerTextForXPath_ForInvalidUrl()
         {
             //arrange
             string url = "not a valid url";
-            string xpath = "//div/h1";
+            string xPath = "//div/h1";
             HtmlParser htmlParser = new HtmlParser();
 
             //act
-            Action action = () => htmlParser.getInnerTextForFirstXpathMatch(url, xpath);
+            Action action = () => htmlParser.getInnerTextForFirstXPathMatch(url, xPath);
 
             //assert
             action.Should().Throw<UriFormatException>();
         }
         
         [Test]
-        public void ShouldNot_GetInnerTextForXpath_ForInvalidXpath()
+        public void ShouldNot_GetInnerTextForXPath_ForInvalidXPath()
         {
             //arrange
             string url = "http://www.espn.com/nfl/player/_/id/13295/";
-            string xpath = "//notvalid/xpath";
+            string xPath = "//notvalid/xPath";
             HtmlParser htmlParser = new HtmlParser();
 
             //act
-            Action action = () => htmlParser.getInnerTextForFirstXpathMatch(url, xpath);
+            Action action = () => htmlParser.getInnerTextForFirstXPathMatch(url, xPath);
 
             //assert
-            action.Should().Throw<NoNodesForXpathException>();
+            action.Should().Throw<NoNodesForXPathException>();
         }
         
         [Test]
-        public void Should_GetInnerTextForXpath_ForMultipleNodeMatches()
+        public void Should_GetInnerTextForXPath_ForMultipleNodeMatches()
         {
             //arrange
             string url = "http://www.espn.com/nfl/player/_/id/13295/";
-            string xpath = "//div";
+            string xPath = "//div";
             HtmlParser htmlParser = new HtmlParser();
 
             //act
-            string playerName = htmlParser.getInnerTextForFirstXpathMatch(url, xpath);
+            string playerName = htmlParser.getInnerTextForFirstXPathMatch(url, xPath);
 
             //assert
             playerName.Should().NotBeNull();

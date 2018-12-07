@@ -8,28 +8,30 @@ namespace Espn.Fantasy.Football.Domain.Service
     {
         private readonly IHttpProvider _httpProvider;
         private readonly IUrlConfigurationProvider _urlConfigurationProvider;
+        private readonly INflPlayerService _nflPlayerService;
 
-        public EspnApiFantasyFootballService(IHttpProvider httpProvider, IUrlConfigurationProvider urlConfigurationProvider)
+        public EspnApiFantasyFootballService(IHttpProvider httpProvider, IUrlConfigurationProvider urlConfigurationProvider, INflPlayerService nflPlayerService)
         {
             _httpProvider = httpProvider;
             _urlConfigurationProvider = urlConfigurationProvider;
+            _nflPlayerService = nflPlayerService;
         }
 
         public async Task<League> GetLeagueAsync(int leagueId, int year)
         {
-            string url = _urlConfigurationProvider.GetLeagueEndpointUrlWithBase(leagueId, year);
+            string url = _urlConfigurationProvider.GetLeagueEndpointUrl(leagueId, year);
             return await _httpProvider.GetAsync<League>(url);
         }
 
         public async Task<LeagueScoreboard> GetScoreboardAsync(int leagueId, int year)
         {
-            string url = _urlConfigurationProvider.GetScoreboardEndpointWithBase(leagueId, year);
+            string url = _urlConfigurationProvider.GetScoreboardEndpoint(leagueId, year);
             return await _httpProvider.GetAsync<LeagueScoreboard>(url);
         }
 
         public async Task<RecentActivity> GetRecentActivity(int leagueId, int year)
         {
-            string url = _urlConfigurationProvider.GetRecentActivityEndpointWithBase(leagueId, year);
+            string url = _urlConfigurationProvider.GetRecentActivityEndpoint(leagueId, year);
             return await _httpProvider.GetAsync<RecentActivity>(url);
         }
     }

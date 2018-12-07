@@ -2,6 +2,7 @@
 using Espn.Fantasy.Football.Domain.Model.Response;
 using Espn.Fantasy.Football.Domain.Provider;
 using Espn.Fantasy.Football.Domain.Service;
+using Espn.Fantasy.Football.Html.Parser.Hap.Provider;
 using Espn.Fantasy.Football.Serialization.NewtonSoft.Provider;
 
 namespace Espn.Fantasy.Football.Client
@@ -13,7 +14,8 @@ namespace Espn.Fantasy.Football.Client
         public EspnFantasyFootballClient()
         {
             _fantasyFootballService = new EspnApiFantasyFootballService(
-                new SystemDotNetHttpProvider(new JsonSerializationProvider()), new HardcodedUrlConfigurationProvider());
+                new SystemDotNetHttpProvider(new JsonSerializationProvider()), new HardcodedUrlConfigurationProvider(),
+                new NflPlayerService(new HtmlParser(), new HardcodedUrlConfigurationProvider()));
         }
 
         public async Task<League> GetLeagueAsync(int leagueId, int year)

@@ -6,14 +6,14 @@ namespace Espn.Fantasy.Football.Html.Parser.Hap.Provider
 {
     public class HtmlParser : IHtmlParserProvider
     {
-        public string getInnerTextForFirstXpathMatch(string url, string xpath)
+        public string getInnerTextForFirstXPathMatch(string url, string xPath)
         {
             HtmlWeb htmlWeb = new HtmlWeb();
             HtmlDocument htmlDocument = htmlWeb.Load(url);
-            HtmlNode htmlNode = htmlDocument.DocumentNode.SelectSingleNode(xpath);
+            HtmlNode htmlNode = htmlDocument.DocumentNode.SelectSingleNode(xPath);
             if (htmlNode == null)
             {
-                throw new NoNodesForXpathException();
+                throw new NoNodesForXPathException();
             }
             return htmlNode.InnerText;
         }

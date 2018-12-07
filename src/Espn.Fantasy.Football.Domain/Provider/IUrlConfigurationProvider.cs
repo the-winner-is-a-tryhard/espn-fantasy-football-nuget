@@ -2,9 +2,9 @@
 {
     public interface IUrlConfigurationProvider
     {
-        string GetUrlBase();
-        string GetLeagueEndpointUrlWithBase(int leagueId, int year);
-        string GetScoreboardEndpointWithBase(int leagueId, int year);
-        string GetRecentActivityEndpointWithBase(int leagueId, int year);
+        string GetLeagueEndpointUrl(int leagueId, int year);
+        string GetScoreboardEndpoint(int leagueId, int year);
+        string GetRecentActivityEndpoint(int leagueId, int year);
+        string GetNflPlayerEndpoint(int playerId);
     }
 }

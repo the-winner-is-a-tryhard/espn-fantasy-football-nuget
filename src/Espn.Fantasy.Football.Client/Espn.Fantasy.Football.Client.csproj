@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Espn.Fantasy.Football.Domain\Espn.Fantasy.Football.Domain.csproj" />
+    <ProjectReference Include="..\Espn.Fantasy.Football.Html.Parser.Hap\Espn.Fantasy.Football.Html.Parser.Hap.csproj" />
     <ProjectReference Include="..\Espn.Fantasy.Football.Serialization.NewtonSoft\Espn.Fantasy.Football.Serialization.NewtonSoft.csproj" />
   </ItemGroup>
 

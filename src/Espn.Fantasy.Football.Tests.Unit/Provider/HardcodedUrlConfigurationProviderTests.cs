@@ -16,7 +16,7 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
             IUrlConfigurationProvider urlConfigurationProvider = new HardcodedUrlConfigurationProvider();
 
             //act
-            string url = urlConfigurationProvider.GetLeagueEndpointUrlWithBase(leagueId, year);
+            string url = urlConfigurationProvider.GetLeagueEndpointUrl(leagueId, year);
 
             //assert
             url.Should().BeEquivalentTo("http://games.espn.com/ffl/api/v2/leaguesettings?leagueId=5555&seasonId=2018");
@@ -31,7 +31,7 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
             IUrlConfigurationProvider urlConfigurationProvider = new HardcodedUrlConfigurationProvider();
 
             //act
-            string url = urlConfigurationProvider.GetLeagueEndpointUrlWithBase(leagueId, year);
+            string url = urlConfigurationProvider.GetLeagueEndpointUrl(leagueId, year);
 
             //assert
             url.Should().BeEquivalentTo("http://games.espn.com/ffl/api/v2/leaguesettings?leagueId=-5555&seasonId=-2018");
@@ -46,7 +46,7 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
             IUrlConfigurationProvider urlConfigurationProvider = new HardcodedUrlConfigurationProvider();
 
             //act
-            string url = urlConfigurationProvider.GetScoreboardEndpointWithBase(leagueId, year);
+            string url = urlConfigurationProvider.GetScoreboardEndpoint(leagueId, year);
 
             //assert
             url.Should().BeEquivalentTo("http://games.espn.com/ffl/api/v2/scoreboard?leagueId=5555&seasonId=2018");
@@ -61,7 +61,7 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
             IUrlConfigurationProvider urlConfigurationProvider = new HardcodedUrlConfigurationProvider();
 
             //act
-            string url = urlConfigurationProvider.GetScoreboardEndpointWithBase(leagueId, year);
+            string url = urlConfigurationProvider.GetScoreboardEndpoint(leagueId, year);
 
             //assert
             url.Should().BeEquivalentTo("http://games.espn.com/ffl/api/v2/scoreboard?leagueId=-5555&seasonId=-2018");
@@ -76,7 +76,7 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
             IUrlConfigurationProvider urlConfigurationProvider = new HardcodedUrlConfigurationProvider();
 
             //act
-            string url = urlConfigurationProvider.GetRecentActivityEndpointWithBase(leagueId, year);
+            string url = urlConfigurationProvider.GetRecentActivityEndpoint(leagueId, year);
 
             //assert
             url.Should().BeEquivalentTo("http://games.espn.com/ffl/api/v2/recentActivity?leagueId=5555&seasonId=2018");
@@ -91,10 +91,38 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
             IUrlConfigurationProvider urlConfigurationProvider = new HardcodedUrlConfigurationProvider();
 
             //act
-            string url = urlConfigurationProvider.GetRecentActivityEndpointWithBase(leagueId, year);
+            string url = urlConfigurationProvider.GetRecentActivityEndpoint(leagueId, year);
 
             //assert
             url.Should().BeEquivalentTo("http://games.espn.com/ffl/api/v2/recentActivity?leagueId=-5555&seasonId=-2018");
+        }
+        
+        [Test]
+        public void Should_GetNflPlayerUrl_ForValidInput()
+        {
+            //arrange
+            int playerId = 55555;
+            IUrlConfigurationProvider urlConfigurationProvider = new HardcodedUrlConfigurationProvider();
+
+            //act
+            string url = urlConfigurationProvider.GetNflPlayerEndpoint(playerId);
+
+            //assert
+            url.Should().BeEquivalentTo("http://www.espn.com/nfl/player/_/id/55555");
+        }
+
+        [Test]
+        public void Should_GetNflPlayerUrl_ForNegativeInput()
+        {
+            //arrange
+            int playerId = -55555;
+            IUrlConfigurationProvider urlConfigurationProvider = new HardcodedUrlConfigurationProvider();
+
+            //act
+            string url = urlConfigurationProvider.GetNflPlayerEndpoint(playerId);
+
+            //assert
+            url.Should().BeEquivalentTo("http://www.espn.com/nfl/player/_/id/-55555");
         }
     }
 }
