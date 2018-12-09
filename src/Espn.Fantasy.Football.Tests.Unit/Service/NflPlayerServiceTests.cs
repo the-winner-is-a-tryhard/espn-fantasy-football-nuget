@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Espn.Fantasy.Football.Domain.Provider;
 using Espn.Fantasy.Football.Domain.Service;
 using FakeItEasy;
@@ -10,7 +11,7 @@ namespace Espn.Fantasy.Football.Tests.Unit.Service
     public class NflPlayerServiceTests
     {
         [Test]
-        public void Should_GetPlayerNameForId_ForStandardInput()
+        public async Task Should_GetPlayerNameForId_ForStandardInput()
         {
             //arrange
             int playerId = 55555;
@@ -23,7 +24,7 @@ namespace Espn.Fantasy.Football.Tests.Unit.Service
             NflPlayerService nflPlayerService = new NflPlayerService(htmlParserProvider, urlConfigurationProvider);
             
             //act
-            string playerName = nflPlayerService.GetPlayerNameForId(55555);
+            string playerName = await nflPlayerService.GetPlayerNameForId(55555);
 
             //assert
             playerName.Should().BeEquivalentTo("Emmanuel Sanders");

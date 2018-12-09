@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Espn.Fantasy.Football.Html.Parser.Hap.Exception;
 using Espn.Fantasy.Football.Html.Parser.Hap.Provider;
 using FluentAssertions;
@@ -10,7 +11,7 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
     public class HtmlParserTests
     {
         [Test]
-        public void Should_GetInnerTextForXPath_ForStandardInput()
+        public async Task Should_GetInnerTextForXPath_ForStandardInput()
         {
             //arrange
             string url = "http://www.espn.com/nfl/player/_/id/13295";
@@ -18,14 +19,14 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
             HtmlParser htmlParser = new HtmlParser();
 
             //act
-            string playerName = htmlParser.getInnerTextForFirstXPathMatch(url, xPath);
+            string playerName = await htmlParser.getInnerTextForFirstXPathMatch(url, xPath);
 
             //assert
             playerName.Should().Be("Emmanuel Sanders");
         }
         
         [Test]
-        public void ShouldNot_GetInnerTextForXPath_ForInvalidUrl()
+        public void  ShouldNot_GetInnerTextForXPath_ForInvalidUrl()
         {
             //arrange
             string url = "not a valid url";
@@ -33,7 +34,7 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
             HtmlParser htmlParser = new HtmlParser();
 
             //act
-            Action action = () => htmlParser.getInnerTextForFirstXPathMatch(url, xPath);
+            Func<Task> action = async () => await htmlParser.getInnerTextForFirstXPathMatch(url, xPath);
 
             //assert
             action.Should().Throw<UriFormatException>();
@@ -48,14 +49,14 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
             HtmlParser htmlParser = new HtmlParser();
 
             //act
-            Action action = () => htmlParser.getInnerTextForFirstXPathMatch(url, xPath);
+            Func<Task> action = async () => await htmlParser.getInnerTextForFirstXPathMatch(url, xPath);
 
             //assert
             action.Should().Throw<NoNodesForXPathException>();
         }
         
         [Test]
-        public void Should_GetInnerTextForXPath_ForMultipleNodeMatches()
+        public async Task Should_GetInnerTextForXPath_ForMultipleNodeMatches()
         {
             //arrange
             string url = "http://www.espn.com/nfl/player/_/id/13295/";
@@ -63,7 +64,7 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
             HtmlParser htmlParser = new HtmlParser();
 
             //act
-            string playerName = htmlParser.getInnerTextForFirstXPathMatch(url, xPath);
+            string playerName = await htmlParser.getInnerTextForFirstXPathMatch(url, xPath);
 
             //assert
             playerName.Should().NotBeNull();

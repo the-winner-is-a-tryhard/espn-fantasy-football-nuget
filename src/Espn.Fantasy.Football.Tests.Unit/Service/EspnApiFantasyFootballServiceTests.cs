@@ -18,8 +18,7 @@ namespace Espn.Fantasy.Football.Tests.Unit.Service
             int year = 2018;
             IHttpProvider httpProvider = A.Fake<IHttpProvider>();
             IUrlConfigurationProvider urlConfigurationProvider = A.Fake<IUrlConfigurationProvider>();
-            INflPlayerService nflPlayerService = A.Fake<INflPlayerService>();
-            IFantasyFootballService fantasyFootballService = new EspnApiFantasyFootballService(httpProvider, urlConfigurationProvider, nflPlayerService);
+            IFantasyFootballService fantasyFootballService = new EspnApiFantasyFootballService(httpProvider, urlConfigurationProvider);
             
             //act
             League league = await fantasyFootballService.GetLeagueAsync(leagueId, year);
@@ -37,8 +36,7 @@ namespace Espn.Fantasy.Football.Tests.Unit.Service
             int year = 2018;
             IHttpProvider httpProvider = A.Fake<IHttpProvider>();
             IUrlConfigurationProvider urlConfigurationProvider = A.Fake<IUrlConfigurationProvider>();
-            INflPlayerService nflPlayerService = A.Fake<INflPlayerService>();
-            IFantasyFootballService fantasyFootballService = new EspnApiFantasyFootballService(httpProvider, urlConfigurationProvider, nflPlayerService);
+            IFantasyFootballService fantasyFootballService = new EspnApiFantasyFootballService(httpProvider, urlConfigurationProvider);
             
             //act
             LeagueScoreboard leagueScoreboard = await fantasyFootballService.GetScoreboardAsync(leagueId, year);
@@ -57,7 +55,7 @@ namespace Espn.Fantasy.Football.Tests.Unit.Service
             IHttpProvider httpProvider = A.Fake<IHttpProvider>();
             IUrlConfigurationProvider urlConfigurationProvider = A.Fake<IUrlConfigurationProvider>();
             INflPlayerService nflPlayerService = A.Fake<INflPlayerService>();
-            IFantasyFootballService fantasyFootballService = new EspnApiFantasyFootballService(httpProvider, urlConfigurationProvider, nflPlayerService);
+            IFantasyFootballService fantasyFootballService = new EspnApiFantasyFootballService(httpProvider, urlConfigurationProvider);
             
             //act
             RecentActivity recentActivity = await fantasyFootballService.GetRecentActivity(leagueId, year);

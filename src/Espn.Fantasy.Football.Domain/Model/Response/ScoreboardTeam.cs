@@ -8,6 +8,6 @@ namespace Espn.Fantasy.Football.Domain.Model.Response
         public decimal Score { get; set; }
         public TeamRecord Team { get; set; }
         public int TeamId { get; set; }
-        public IList<int> PlayerIDs { get; set; }
+        public IList<int> PlayerIds { get; set; }
     }
 }

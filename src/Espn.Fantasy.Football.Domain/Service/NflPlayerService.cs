@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Espn.Fantasy.Football.Domain.Provider;
 
 namespace Espn.Fantasy.Football.Domain.Service
@@ -17,14 +18,14 @@ namespace Espn.Fantasy.Football.Domain.Service
             _urlConfigurationProvider = urlConfigurationProvider;
         }
         
-        public string GetPlayerNameForId(int playerId)
+        public async Task<string> GetPlayerNameForId(int playerId)
         {
             if (_cache.ContainsKey(playerId))
             {
                 return _cache[playerId];
             }
             string url = _urlConfigurationProvider.GetNflPlayerEndpoint(playerId);
-            string playerName = _htmlParserProvider.getInnerTextForFirstXPathMatch(url, XPATH_FOR_PLAYER_NAME);
+            string playerName = await _htmlParserProvider.getInnerTextForFirstXPathMatch(url, XPATH_FOR_PLAYER_NAME);
             _cache[playerId] = playerName;
             return playerName;
         }

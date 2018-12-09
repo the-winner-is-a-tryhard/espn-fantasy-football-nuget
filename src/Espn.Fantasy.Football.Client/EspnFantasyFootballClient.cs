@@ -10,12 +10,13 @@ namespace Espn.Fantasy.Football.Client
     public class EspnFantasyFootballClient : IFantasyFootballClient
     {
         private readonly IFantasyFootballService _fantasyFootballService;
+        private readonly INflPlayerService _nflPlayerService;
 
         public EspnFantasyFootballClient()
         {
             _fantasyFootballService = new EspnApiFantasyFootballService(
-                new SystemDotNetHttpProvider(new JsonSerializationProvider()), new HardcodedUrlConfigurationProvider(),
-                new NflPlayerService(new HtmlParser(), new HardcodedUrlConfigurationProvider()));
+                new SystemDotNetHttpProvider(new JsonSerializationProvider()), new HardcodedUrlConfigurationProvider());
+            _nflPlayerService = new NflPlayerService(new HtmlParser(), new HardcodedUrlConfigurationProvider());
         }
 
         public async Task<League> GetLeagueAsync(int leagueId, int year)
@@ -31,6 +32,11 @@ namespace Espn.Fantasy.Football.Client
         public async Task<RecentActivity> GetRecentActivity(int leagueId, int year)
         {
             return await _fantasyFootballService.GetRecentActivity(leagueId, year);
+        }
+
+        public async Task<string> GetNflPlayerNameForId(int playerId)
+        {
+            return await _nflPlayerService.GetPlayerNameForId(playerId);
         }
     }
 }

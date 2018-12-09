@@ -8,13 +8,11 @@ namespace Espn.Fantasy.Football.Domain.Service
     {
         private readonly IHttpProvider _httpProvider;
         private readonly IUrlConfigurationProvider _urlConfigurationProvider;
-        private readonly INflPlayerService _nflPlayerService;
 
-        public EspnApiFantasyFootballService(IHttpProvider httpProvider, IUrlConfigurationProvider urlConfigurationProvider, INflPlayerService nflPlayerService)
+        public EspnApiFantasyFootballService(IHttpProvider httpProvider, IUrlConfigurationProvider urlConfigurationProvider)
         {
             _httpProvider = httpProvider;
             _urlConfigurationProvider = urlConfigurationProvider;
-            _nflPlayerService = nflPlayerService;
         }
 
         public async Task<League> GetLeagueAsync(int leagueId, int year)

@@ -53,5 +53,19 @@ namespace Espn.Fantasy.Football.Tests.Integration.Client
             //assert
             recentActivity.Should().NotBeNull();
         }
+        
+        [Test]
+        public async Task Should_GetNflPlayerNameForId_ForValidInput()
+        {
+            //arrange
+            int playerId = 13295;
+            EspnFantasyFootballClient espnFantasyFootballClient = new EspnFantasyFootballClient();
+
+            //act
+            string playerName = await espnFantasyFootballClient.GetNflPlayerNameForId(playerId);
+
+            //assert
+            playerName.Should().NotBeNull();
+        }
     }
 }

@@ -64,7 +64,7 @@ namespace Espn.Fantasy.Football.Tests.Assets.ScoreboardSerialization
                                     LogoType = "custom"
                                 },
                                 TeamId = 1,
-                                PlayerIDs = new List<int>()
+                                PlayerIds = new List<int>()
                                 {
                                     17797,
                                     17834,
