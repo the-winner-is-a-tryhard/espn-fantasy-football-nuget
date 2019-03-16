@@ -4,8 +4,10 @@ using Newtonsoft.Json;
 
 namespace Espn.Fantasy.Football.Serialization.NewtonSoft.Provider
 {
+    /// <inheritdoc />
     public class JsonSerializationProvider : IJsonSerializationProvider
     {
+        /// <inheritdoc/>
         public T DeserializeJson<T>(string json)
         {
             EspnServerErrorResponse espnServerErrorResponse = JsonConvert.DeserializeObject<EspnServerErrorResponse>(json);

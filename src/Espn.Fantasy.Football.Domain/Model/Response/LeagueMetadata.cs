@@ -8,6 +8,9 @@ namespace Espn.Fantasy.Football.Domain.Model.Response
         public Defaults Defaults { get; set; }
         public string Status { get; set; }
         public DateTime DateModifiedLeague { get; set; }
+        /// <summary>
+        /// Four-digit year
+        /// </summary>
         public int SeasonId { get; set; }
         public DateTime ServerDate { get; set; }
         public DateTime DateModifiedUser { get; set; }

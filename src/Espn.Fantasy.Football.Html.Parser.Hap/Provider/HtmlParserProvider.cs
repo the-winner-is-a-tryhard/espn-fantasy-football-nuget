@@ -5,8 +5,10 @@ using HtmlAgilityPack;
 
 namespace Espn.Fantasy.Football.Html.Parser.Hap.Provider
 {
+    /// <inheritdoc />
     public class HtmlParser : IHtmlParserProvider
     {
+        /// <inheritdoc />
         public async Task<string> getInnerTextForFirstXPathMatch(string url, string xPath)
         {
             HtmlWeb htmlWeb = new HtmlWeb();

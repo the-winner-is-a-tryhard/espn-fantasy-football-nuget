@@ -2,6 +2,9 @@
 {
     public class Finance
     {
+        /// <summary>
+        /// Move to Injured Reserve
+        /// </summary>
         public int MoveToIr { get; set; }
         public int MiscFee { get; set; }
         public int Acquisition { get; set; }
