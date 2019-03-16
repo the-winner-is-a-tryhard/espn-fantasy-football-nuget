@@ -15,14 +15,14 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
         {
             //arrange
             string url = "http://www.espn.com/nfl/player/_/id/13295";
-            string xPath = "//div/h1";
+            string xPath = "//head/title";
             HtmlParser htmlParser = new HtmlParser();
 
             //act
             string playerName = await htmlParser.getInnerTextForFirstXPathMatch(url, xPath);
 
             //assert
-            playerName.Should().Be("Emmanuel Sanders");
+            playerName.Should().Be("Emmanuel Sanders Stats, News, Bio | ESPN");
         }
         
         [Test]

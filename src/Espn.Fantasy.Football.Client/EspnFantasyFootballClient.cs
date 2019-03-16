@@ -20,7 +20,7 @@ namespace Espn.Fantasy.Football.Client
         {
             _fantasyFootballService = new EspnApiFantasyFootballService(
                 new SystemDotNetHttpProvider(new JsonSerializationProvider()), new HardcodedUrlConfigurationProvider());
-            _nflPlayerService = new NflPlayerService(new HtmlParser(), new HardcodedUrlConfigurationProvider());
+            _nflPlayerService = new NflPlayerService(new HtmlParser(), new EspnHtmlTrimService(), new HardcodedUrlConfigurationProvider());
         }
 
         /// <inheritdoc />
