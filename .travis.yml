@@ -6,12 +6,11 @@ addons:
   sonarcloud:
     organization: "scottenriquez-github"
 
+before_install:
+- bash ./tools/travis-ci-install-sonar.sh
+
 install:
 - dotnet restore src
 
 script:
- - mono ../tools/sonar/SonarQube.Scanner.MSBuild.exe begin /k:"scottenriquez_espn-fantasy-football-nuget" /d:sonar.organization="scottenriquez-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login=${SONAR_TOKEN}
- - mono ../tools/sonar/SonarQube.Scanner.MSBuild.exe end /d:sonar.login=${SONAR_TOKEN}
- - dotnet build src
- - dotnet test src/Espn.Fantasy.Football.Tests.Unit/Espn.Fantasy.Football.Tests.Unit.csproj
- - dotnet test src/Espn.Fantasy.Football.Tests.Integration/Espn.Fantasy.Football.Tests.Integration.csproj
+ - bash ./tools/travis-ci-build.sh
