@@ -2,6 +2,10 @@ language: csharp
 mono: none
 dotnet: 2.0.0
 
+addons:
+  sonarcloud:
+    organization: "scottenriquez-github"
+
 install:
 - dotnet restore src
 
