@@ -1,16 +1,9 @@
-﻿namespace Espn.Fantasy.Football.Domain.Model.Response
+namespace Espn.Fantasy.Football.Domain.Model.Response
 {
-    public class Division
-    {
-        public int DivisionId { get; set; }
-        /// <summary>
-        /// Workaround for inconsistent naming in ESPN's response object; use Division.DivisionName instead
-        /// </summary>
-        public string Name
-        {
-            set { DivisionName = value; }
-        }
-        public string DivisionName { get; set; }
-        public int Size { get; set; }
-    }
+	public class Division
+	{
+		public int Id { get; set; }
+		public string Name { get; set; }
+		public int Size { get; set; }
+	}
 }

@@ -9,7 +9,7 @@ namespace Espn.Fantasy.Football.Html.Parser.Hap.Provider
     public class HtmlParser : IHtmlParserProvider
     {
         /// <inheritdoc />
-        public async Task<string> getInnerTextForFirstXPathMatch(string url, string xPath)
+        public async Task<string> GetInnerTextForFirstXPathMatch(string url, string xPath)
         {
             HtmlWeb htmlWeb = new HtmlWeb();
             HtmlDocument htmlDocument = await htmlWeb.LoadFromWebAsync(url);

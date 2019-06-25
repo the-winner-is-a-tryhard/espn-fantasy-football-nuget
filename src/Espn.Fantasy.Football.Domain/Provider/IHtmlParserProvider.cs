@@ -13,6 +13,6 @@ namespace Espn.Fantasy.Football.Domain.Provider
         /// <param name="url">URL</param>
         /// <param name="xPath">xPath</param>
         /// <returns>Inner text of first match</returns>
-        Task<string> getInnerTextForFirstXPathMatch(string url, string xPath);
+        Task<string> GetInnerTextForFirstXPathMatch(string url, string xPath);
     }
 }

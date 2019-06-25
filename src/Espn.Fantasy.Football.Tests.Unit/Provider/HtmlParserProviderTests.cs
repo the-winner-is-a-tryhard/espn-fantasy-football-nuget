@@ -19,7 +19,7 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
             HtmlParser htmlParser = new HtmlParser();
 
             //act
-            string playerName = await htmlParser.getInnerTextForFirstXPathMatch(url, xPath);
+            string playerName = await htmlParser.GetInnerTextForFirstXPathMatch(url, xPath);
 
             //assert
             playerName.Should().Be("Emmanuel Sanders Stats, News, Bio | ESPN");
@@ -34,7 +34,7 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
             HtmlParser htmlParser = new HtmlParser();
 
             //act
-            Func<Task> action = async () => await htmlParser.getInnerTextForFirstXPathMatch(url, xPath);
+            Func<Task> action = async () => await htmlParser.GetInnerTextForFirstXPathMatch(url, xPath);
 
             //assert
             action.Should().Throw<UriFormatException>();
@@ -49,7 +49,7 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
             HtmlParser htmlParser = new HtmlParser();
 
             //act
-            Func<Task> action = async () => await htmlParser.getInnerTextForFirstXPathMatch(url, xPath);
+            Func<Task> action = async () => await htmlParser.GetInnerTextForFirstXPathMatch(url, xPath);
 
             //assert
             action.Should().Throw<NoNodesForXPathException>();
@@ -64,7 +64,7 @@ namespace Espn.Fantasy.Football.Tests.Unit.Provider
             HtmlParser htmlParser = new HtmlParser();
 
             //act
-            string playerName = await htmlParser.getInnerTextForFirstXPathMatch(url, xPath);
+            string playerName = await htmlParser.GetInnerTextForFirstXPathMatch(url, xPath);
 
             //assert
             playerName.Should().NotBeNull();

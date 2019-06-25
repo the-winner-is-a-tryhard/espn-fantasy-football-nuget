@@ -6,7 +6,7 @@ namespace Espn.Fantasy.Football.Domain.Service
 {
     public class NflPlayerService : INflPlayerService
     {
-        private const string XPATH_FOR_PLAYER_NAME = "//head/title";
+        private const string XpathForPlayerName = "//head/title";
         private readonly Dictionary<int, string> _cache;
         private readonly IHtmlParserProvider _htmlParserProvider;
         private readonly IEspnHtmlTrimService _espnHtmlTrimService;
@@ -27,7 +27,7 @@ namespace Espn.Fantasy.Football.Domain.Service
                 return _cache[playerId];
             }
             string url = _urlConfigurationProvider.GetNflPlayerEndpoint(playerId);
-            string titleTag = await _htmlParserProvider.getInnerTextForFirstXPathMatch(url, XPATH_FOR_PLAYER_NAME);
+            string titleTag = await _htmlParserProvider.GetInnerTextForFirstXPathMatch(url, XpathForPlayerName);
             string playerName = _espnHtmlTrimService.TrimNameFromTitleTag(titleTag);
             _cache[playerId] = playerName;
             return playerName;

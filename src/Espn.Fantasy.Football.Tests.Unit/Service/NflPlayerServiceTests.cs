@@ -18,7 +18,7 @@ namespace Espn.Fantasy.Football.Tests.Unit.Service
             string url = "http://www.espn.com/nfl/player/_/id/55555";
             string xPath = "//head/title";
             IHtmlParserProvider htmlParserProvider = A.Fake<IHtmlParserProvider>();
-            A.CallTo(() => htmlParserProvider.getInnerTextForFirstXPathMatch(url, xPath)).Returns("Emmanuel Sanders Stats, News, Bio | ESPN");
+            A.CallTo(() => htmlParserProvider.GetInnerTextForFirstXPathMatch(url, xPath)).Returns("Emmanuel Sanders Stats, News, Bio | ESPN");
             IEspnHtmlTrimService espnHtmlTrimService = A.Fake<IEspnHtmlTrimService>();
             A.CallTo(() => espnHtmlTrimService.TrimNameFromTitleTag("Emmanuel Sanders Stats, News, Bio | ESPN")).Returns("Emmanuel Sanders");
             IUrlConfigurationProvider urlConfigurationProvider = A.Fake<IUrlConfigurationProvider>();

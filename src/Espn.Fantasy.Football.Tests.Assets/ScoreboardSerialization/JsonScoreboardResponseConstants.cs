@@ -1,7 +1,0 @@
-﻿namespace Espn.Fantasy.Football.Tests.Assets.ScoreboardSerialization
-{
-    public static class JsonScoreboardResponseConstants
-    {
-        public static string VALID_SCOREBOARD_JSON = "{\"scoreboard\":{\"proGamesInProgress\":false,\"scoringPeriodId\":18,\"matchups\":[{\"teams\":[{\"home\":true,\"score\":53.7,\"team\":{\"record\":{\"awayPercentage\":0,\"divisionStanding\":4,\"overallStanding\":4,\"divisionLosses\":5,\"homePercentage\":0,\"awayTies\":0,\"divisionWins\":8,\"streakType\":1,\"overallTies\":0,\"homeTies\":0,\"homeWins\":6,\"divisionTies\":0,\"overallPercentage\":0.61538,\"overallWins\":8,\"overallLosses\":5,\"streakLength\":1,\"pointsAgainst\":1087.25,\"awayWins\":2,\"divisionPercentage\":0.61538,\"homeLosses\":2,\"pointsFor\":1180.35,\"awayLosses\":3},\"waiverRank\":12,\"division\":{\"divisionName\":\"Division 1\",\"divisionId\":0,\"size\":12},\"teamAbbrev\":\"TRSH\",\"teamNickname\":\"of the Law\",\"logoUrl\":\"https://i.imgur.com/P0tCXCd.gif\",\"teamLocation\":\"The Schlong Arm\",\"teamId\":1,\"logoType\":\"custom\"},\"teamId\":1,\"playerIDs\":[17797,17834,16731,12563,17832,18306,60033,16504,18314,15168,14877,16724,18462,17175,18233]}],\"winner\":\"away\",\"bye\":false}],\"matchupPeriodId\":16},\"metadata\":{\"leagueId\":\"526113\",\"defaults\":{},\"status\":\"offseason\",\"dateModifiedLeague\":\"2018-04-13T08:43:16.227Z\",\"seasonId\":\"2017\",\"serverDate\":\"2018-07-05T19:19:48.879Z\"}}";
-    }
-}
