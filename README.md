@@ -1,5 +1,5 @@
-# API v3 Update Required
-ESPN recently updated their web UI and APIs which broke this package. I'm currently working on updating this package and fully intend on maintaining it. In the meantime, this package cannot be used. For more information, see [this GitHub issue](https://github.com/scottenriquez/espn-fantasy-football-nuget/issues/10).
+# Deprecation API v3 Update
+ESPN updated their web UI and APIs which broke this package. My fantasy league is moving to Sleeper, so I no longer have any intention of updating this package. For more information, see [this GitHub issue](https://github.com/scottenriquez/espn-fantasy-football-nuget/issues/10).
 
 # ESPN Fantasy Football NuGet Package
 This is a NuGet package for interacting with ESPN's fantasy football API.
