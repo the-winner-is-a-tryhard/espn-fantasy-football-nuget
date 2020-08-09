@@ -1,4 +1,4 @@
-# Deprecation API v3 Update
+# Deprecation Due to API v3
 ESPN updated their web UI and APIs which broke this package. My fantasy league is moving to Sleeper, so I no longer have any intention of updating this package. For more information, see [this GitHub issue](https://github.com/scottenriquez/espn-fantasy-football-nuget/issues/10).
 
 # ESPN Fantasy Football NuGet Package
